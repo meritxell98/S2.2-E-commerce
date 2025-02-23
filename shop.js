@@ -127,3 +127,38 @@ function applyPromotionsCart() {
     }
 
 }
+
+// Exercise 5
+function printCart() {
+    // Fill the shopping cart modal manipulating the shopping cart dom
+
+    let cartList = document.getElementById('cart_list');
+    let totalPriceElement = document.getElementById("total_price");
+    cartList.innerHTML = ""; // Neteja el contingut previ
+    
+    let total = 0;
+    
+    applyPromotionsCart();
+
+    console.log(cart)
+    cart.forEach(item => {
+        
+        let itemTotal = (item.price * item.quantity) - item.subtotalWithDiscount;
+        total += itemTotal;
+
+        let row = `
+            <tr>
+                <th scope="row">${item.name}</th>
+                <td>$${item.price.toFixed(2)}</td>
+                <td>${item.quantity}</td>
+                <td>$${itemTotal.toFixed(2)}</td>
+            </tr>
+        `;
+        cartList.innerHTML += row;
+    });
+
+    totalPriceElement.textContent = total.toFixed(2);
+
+document.getElementById("cartModal").addEventListener("shown.bs.modal", printCart);
+    
+}
