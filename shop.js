@@ -162,3 +162,22 @@ function printCart() {
 document.getElementById("cartModal").addEventListener("shown.bs.modal", printCart);
     
 }
+// ** Nivell II **
+
+// Exercise 7
+function removeFromCart(id) {
+
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id == id) {
+            cart[i].quantity - 1;
+        }
+
+        if (cart[i].quantity = 0) {
+            cart.splice(cart[i], 1)
+        }
+    }
+}
+
+function open_modal() {
+    printCart();
+}
