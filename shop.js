@@ -104,3 +104,26 @@ function calculateTotal() {
 
     console.log()
 }
+// Exercise 4
+function applyPromotionsCart() {
+    // Apply promotions to each item in the array "cart"
+
+    for (let index = 0; index < cart.length; index++) {
+        
+        if (cart[index].id == 1 && cart[index].quantity >= 3) {
+            cart[index].subtotalWithDiscount = cart[index].price * 0.20
+            return
+            
+        }
+
+        if (cart[index].id == 3 && cart[index].quantity >= 10) {
+            cart[index].subtotalWithDiscount = cart[index].price * 0.30
+            return
+        }
+
+        else{
+            cart[index].subtotalWithDiscount = 0
+        }
+    }
+
+}
