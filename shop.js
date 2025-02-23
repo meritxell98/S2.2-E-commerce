@@ -88,3 +88,8 @@ function buy(id) {
         cart.push({ ...product, quantity: 1 });
     }
 }
+
+// Exercise 2
+function cleanCart() {
+    cart.splice(0,cart.length)
+}
