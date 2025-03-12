@@ -5,7 +5,7 @@ A company in the e-commerce sector has asked us for a web that enables customers
 
 Project Setup 
 1. Clone this repo.
-   $ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-shop
+   $ git clone https://github.com/meritxell98/S2.2-E-commerce.git
 3. Unlink the repo.
    $ git remote rm origin
 5. Link your repo to the repository you have created in your github account.
